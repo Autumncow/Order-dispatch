@@ -18,7 +18,7 @@ class Learning:
         self.D_backup = []
         self.N = np.ones([self.T,self.G])
         self.V_s = np.zeros([self.T,self.G])
-        self.path = 'D://Orders.xls'
+        self.path = 'D://Code/Orders.xls'
 
 
     def Sub_D(self,D,t): #collect sub set of D,whose started time is t
@@ -68,7 +68,7 @@ class Learning:
 
     def Orderbackup(self):
         ex = ExcelTool()
-        path = 'D://Orders.xls'
+        path = 'D://code/Orders.xls'
         sheet_name = 'Orders'
         value_title = [["Start time","start region","Used","Price","End time","End eegion"]]
         ex.WriteExcle(path,sheet_name,value_title)
